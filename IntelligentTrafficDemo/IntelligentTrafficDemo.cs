@@ -57,7 +57,7 @@ namespace IntelligentTrafficDemo
 
         private void UpdateDisConnectUI()
         {
-            this.Text = "IntelligentTrafficDemo(智能交通Demo) --- Offline(离线)";
+            this.Text = "Intelligent Traffic Demo --- Offline";
         }
 
         private void ReConnectCallBack(IntPtr lLoginID, IntPtr pchDVRIP, int nDVRPort, IntPtr dwUser)
@@ -66,7 +66,7 @@ namespace IntelligentTrafficDemo
         }
         private void UpdateReConnectUI()
         {
-            this.Text = "IntelligentTrafficDemo(智能交通Demo) --- Online(在线)";
+            this.Text = "IntelligentTrafficDemo --- Online";
         }
 
         private void InitOrLogoutUI()
