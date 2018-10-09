@@ -50,10 +50,11 @@
             this.platecolor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.vehicletype = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.vehiclecolor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.vehiclesize = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lanenumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.address = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.openstrobe_button = new System.Windows.Forms.Button();
             this.subscribe_button = new System.Windows.Forms.Button();
             this.manualsnap_button = new System.Windows.Forms.Button();
@@ -75,7 +76,6 @@
             this.platetype_textBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.attach_pictureBox = new System.Windows.Forms.PictureBox();
-            this.txtPhone = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.realplay_pictureBox)).BeginInit();
@@ -88,7 +88,6 @@
             // 
             this.groupBox1.Controls.Add(this.port_textBox);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.login_button);
             this.groupBox1.Controls.Add(this.name_textBox);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.pwd_textBox);
@@ -124,7 +123,7 @@
             // login_button
             // 
             this.login_button.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_button.Location = new System.Drawing.Point(625, 25);
+            this.login_button.Location = new System.Drawing.Point(147, 20);
             this.login_button.Name = "login_button";
             this.login_button.Size = new System.Drawing.Size(115, 23);
             this.login_button.TabIndex = 4;
@@ -174,7 +173,7 @@
             this.ip_textBox.Name = "ip_textBox";
             this.ip_textBox.Size = new System.Drawing.Size(92, 23);
             this.ip_textBox.TabIndex = 0;
-            this.ip_textBox.Text = "192.168.1.208";
+            this.ip_textBox.Text = "192.168.1.237";
             // 
             // label6
             // 
@@ -269,6 +268,12 @@
             this.vehiclecolor.Text = "Vehicle Color";
             this.vehiclecolor.Width = 120;
             // 
+            // address
+            // 
+            this.address.DisplayIndex = 13;
+            this.address.Text = "Illegal Address";
+            this.address.Width = 300;
+            // 
             // vehiclesize
             // 
             this.vehiclesize.DisplayIndex = 11;
@@ -281,16 +286,11 @@
             this.lanenumber.Text = "Lane Number";
             this.lanenumber.Width = 100;
             // 
-            // address
-            // 
-            this.address.DisplayIndex = 13;
-            this.address.Text = "Illegal Address";
-            this.address.Width = 300;
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtPhone);
             this.groupBox2.Controls.Add(this.openstrobe_button);
+            this.groupBox2.Controls.Add(this.login_button);
             this.groupBox2.Controls.Add(this.subscribe_button);
             this.groupBox2.Controls.Add(this.manualsnap_button);
             this.groupBox2.Controls.Add(this.channel_comboBox);
@@ -303,6 +303,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Enter phone number as 12-digits, Do NOT enter periods, hyphens, or parentheses. E" +
     "x: 923331234567";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(6, 20);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(135, 23);
+            this.txtPhone.TabIndex = 10;
+            this.txtPhone.Text = "923336106762";
             // 
             // openstrobe_button
             // 
@@ -515,13 +523,6 @@
             this.attach_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.attach_pictureBox.TabIndex = 0;
             this.attach_pictureBox.TabStop = false;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(6, 20);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(135, 23);
-            this.txtPhone.TabIndex = 10;
             // 
             // IntelligentTrafficDemo
             // 

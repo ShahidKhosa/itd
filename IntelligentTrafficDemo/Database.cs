@@ -44,6 +44,7 @@ namespace IntelligentTrafficDemo
         {
             try
             {
+                //info.Time = Convert.ToDateTime("12/02/21 10:56:09").ToString("MMM.dd,yyyy HH:mm:ss");
 
                 string query = String.Format("INSERT INTO vehicle_info(record_id, `time`, `type`, groupid, `index`, `count`, platenumber, platetype, platecolor, vehicletype, vehiclecolor, vehiclesize, lanenumber, address, filelenth, `offset`, buffer) VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}', '{6}', '{7}', '{8}', '{9}', '{10}', '{11}', '{12}', '{13}', '{14}', '{15}', '{16}')", info.ID, info.Time, info.Type, info.GroupID, info.Index, info.Count, info.PlateNumber, info.PlateType, info.PlateColor, info.VehicleType, info.VehicleColor, info.VehicleSize, info.LaneNumber, info.Address, info.FileLenth, info.OffSet, info.Buffer);
 
@@ -83,6 +84,8 @@ namespace IntelligentTrafficDemo
             info.FileLenth = (uint)this.random();
             info.OffSet = (uint)this.random();
             info.Buffer = BitConverter.GetBytes(4);
+
+            SmsManager.SendSMS(info);
 
             this.insert(info);
         }

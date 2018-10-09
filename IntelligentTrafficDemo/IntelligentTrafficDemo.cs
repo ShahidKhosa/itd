@@ -28,8 +28,6 @@ namespace IntelligentTrafficDemo
             InitializeComponent();
             this.Load += new EventHandler(IntelligentTrafficDemo_Load);
 
-            //SmsManager.SendSMS();
-
             //Database db = new Database();
             //db.testInsert();
         }
@@ -102,7 +100,7 @@ namespace IntelligentTrafficDemo
 
         private void LoginUI()
         {
-            this.Text = "Intelligent Traffic Demo --- Online";
+            this.Text = "Intelligent Traffic Demo";
             openstrobe_button.Enabled = true;
             login_button.Text = "Logout";
             channel_comboBox.Enabled = true;
@@ -935,6 +933,26 @@ namespace IntelligentTrafficDemo
             item.SubItems.Add(info.VehicleSize);
             item.SubItems.Add(info.LaneNumber);
             item.SubItems.Add(info.Address);
+
+            try
+            {
+                SmsManager.SendSMS(info, txtPhone.Text);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            try
+            {
+                Database db = new Database();
+                db.insert(info);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
 
             event_listView.BeginUpdate();
             event_listView.Items.Insert(0, item);

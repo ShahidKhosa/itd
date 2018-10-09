@@ -7,13 +7,13 @@ namespace IntelligentTrafficDemo
     public class SmsManager
     {
 
-        public static void SendSMS()
+        public static void SendSMS(EventInfo info, string phone = "923366487047")
         {
             string MyUsername   = "923336106762";       //Your Username At Sendpk.com 
             string MyPassword   = "4623";               //Your Password At Sendpk.com 
-            string toNumber     = "923366487047";       //Recepient cell phone number with country code 
+            string toNumber     = phone;       //Recepient cell phone number with country code 
             string Masking      = "JAMVI";              //Your Company Brand Name or Sender Name
-            string MessageText  = "SMS Sent using .Net";
+            string MessageText  = string.Format("{0} is passed through Channel {1} at {2}", info.PlateNumber, info.Index, info.Time);
 
             string jsonResponse = ProcessSMS(Masking, toNumber, MessageText, MyUsername , MyPassword); Console.Write(jsonResponse); 
             //Console.Read(); //to keep console window open if trying in visual studio
